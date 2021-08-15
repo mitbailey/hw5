@@ -13,26 +13,18 @@
 addHitboxes();
 deal();
 
-$(function () {
-    // $(".tile").draggable();
-    // $(".rack").draggable();
+function newGame() {
+    for (var i = 0; i < 7; i++) {
+        // Removes unused tiles.
+        $(".tile" + i).remove();
+    }
 
-    // $(".hitbox").droppable({
-    //     drop: function(event, ui) {
-    //         $(ui.draggable).removeClass("tile");
-    //         $(ui.draggable).addClass("tile-dropped");
-    //         $(ui.draggable).draggable("disable");
-    //     }
-    // });
+    $(".tile-dropped").remove();
 
-    // $(".rack").droppable({
-    //     drop: function (event, ui) {
-    //         $(ui.draggable).removeClass("tile");
-    //         $(ui.draggable).addClass("tile-dropped");
-    //         $(ui.draggable).draggable("disable");
-    //     }
-    // })
-});
+    $(".score").html("SCORE: 0");
+
+    deal();
+}
 
 function updateScore() {
 
@@ -61,7 +53,7 @@ function updateScore() {
     }
 
     console.log("SCORE:", score);
-    $(".score").html(score);
+    $(".score").html("SCORE: " + score);
 }
 
 function addHitboxes() {
@@ -72,7 +64,10 @@ function addHitboxes() {
             $(".hitboxDW" + i).css("left", (75 * i) + "px");
             $(".hitboxDW" + i).droppable({
                 drop: function (event, ui) {
-                    $(ui.draggable).removeClass("tile");
+                    for (var i = 0; i < 7; i++)
+                    {
+                        $(ui.draggable).removeClass("tile" + i);
+                    }
                     $(ui.draggable).addClass("tile-droppedDW");
                     $(ui.draggable).draggable("disable");
                     updateScore();
@@ -85,7 +80,10 @@ function addHitboxes() {
             $(".hitboxDL" + i).css("left", (75 * i) + "px");
             $(".hitboxDL" + i).droppable({
                 drop: function (event, ui) {
-                    $(ui.draggable).removeClass("tile");
+                    for (var i = 0; i < 7; i++)
+                    {
+                        $(ui.draggable).removeClass("tile" + i);
+                    }
                     $(ui.draggable).addClass("tile-droppedDL");
                     $(ui.draggable).draggable("disable");
                     updateScore();
@@ -154,18 +152,19 @@ function deal() {
             // Spawn a blank.
             $(".rack-area").append('<img class="tile' + i + '" id="0" src="images/Scrabble_Tile_Blank.jpg" alt="Tile Blank" width="65">');
             $(".tile" + i).css("left", (75 * i) + "px");
-            $(".tile" + i).draggable();
+            $(".tile" + i).draggable({
+                revert: "invalid"
+            });
         }
         else {
             // Else spawn a letter.
             $(".rack-area").append('<img class="tile' + i + '" id="' + val + '" src="images/Scrabble_Tile_' + String.fromCharCode(li + 65) + '.jpg" alt="Tile" width="65">');
             $(".tile" + i).css("left", (75 * i) + "px");
-            $(".tile" + i).draggable();
+            $(".tile" + i).draggable({
+                revert: "invalid"
+            });
         }
     }
-
-    // Makes sure the newly spawned stuff is draggable.
-    // $(".tile").draggable();
 }
 
 // Toggle navbar visibility.

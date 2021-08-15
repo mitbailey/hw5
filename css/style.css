@@ -339,6 +339,10 @@ samp.invalid {
     position: relative;
 }
 
+.rack {
+    position: relative;
+}
+
 /* Objects with classnames beginning with hitbox. */
 [class^="hitbox"] {
     position: absolute;
@@ -349,6 +353,7 @@ samp.invalid {
 [class*="tile"] {
     position: absolute;
     left: 0;
+    top: 280px;
 }
 
 /* GENERIC CONTAINERS */
