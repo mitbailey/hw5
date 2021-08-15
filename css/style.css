@@ -339,7 +339,14 @@ samp.invalid {
     position: relative;
 }
 
+/* Objects with classnames beginning with hitbox. */
 [class^="hitbox"] {
+    position: absolute;
+    left: 0;
+}
+
+/* Objects with classnames containing tile. */
+[class*="tile"] {
     position: absolute;
     left: 0;
 }
