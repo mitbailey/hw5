@@ -333,6 +333,17 @@ samp.invalid {
     width: 147px;
 }
 
+/* ASSIGNMENT 5 */
+
+.board {
+    position: relative;
+}
+
+[class^="hitbox"] {
+    position: absolute;
+    left: 0;
+}
+
 /* GENERIC CONTAINERS */
 /* ****************** */
 /* These are useful for repeated use. */
