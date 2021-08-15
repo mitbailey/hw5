@@ -1,0 +1,403 @@
+/* 
+    @file style.css
+    @author Mit Bailey (mitbailey99@gmail.com)
+    @brief GUI Assignment 1: Creating Your First Webpage
+    CSS style file.
+    @version 0.1
+    @date 2021.07.07
+    @copyright Copyright (c) 2021
+*/
+
+/* NOTES */
+/* ***** */
+
+/* Margin: Interior boundary. */
+/* Padding: Exterior boundary. */
+
+/* FONT INFORMATION */
+/* **************** */
+@font-face {
+    font-family: NewsGothic-Cond; /* Names the font. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.woff); /* Links to the actual font file. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.ttf); /* Backups, just in case. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.svg);
+    src: url(../fonts/News\ Gothic\ BT\ Cond.woff2);
+    src: url(../fonts/News\ Gothic\ BT\ Cond.otf);
+}
+
+@font-face {
+    font-family: NewsGothic-XTCond-Bold; 
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.woff);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.ttf);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.svg);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.woff2);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.otf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf); /* Couldn't find other types for this one! */
+}
+
+/* BASE TAG FORMATTING */
+/* ******************* */
+/* Formats the base tag type. Can be overridden or adjusted in subtags. */
+
+/* Formatting for the body of the page. */
+body {
+    background-color: lightslategray; /* Changes the background color of this section. */
+    margin: 0px; /* Ensures that things placed within it can abutt the edge. */
+}
+
+/* Formatting for largest headers, typically just the site name on the navbar. */
+h1 {
+    color:black;
+}
+
+/* Formatting for links. */
+a {
+    color: black;
+}
+
+/* Formatting for tables. */
+table {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+/* Formatting for table headers. */
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Formatting for table data cells. */
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* CLASS SPECIFIC FORMATTING */
+/* ************************* */
+/* Adjusts the formatting of specific classes. */
+
+/* Formatting for the site's side-bar navigation. */
+.navbar {
+    visibility: visible; /* Visible by default. */
+    z-index: 5; /* This will bring the bar to the front. */
+    height: 100%; /* Extends this section the height of the screen. */
+    background-color: white;
+    /* width: 250px; */ /* Defines a constant width. */
+    width: 15.625rem;
+    font-size: 1.0625rem;
+    position: fixed; /* Forces a constant position on-screen. */
+    top: 0px; /* Ensures there is no space left at the top. */
+}
+
+/* Formatting for links in the side bar, aka the page names and links. */
+.navbar a {
+    margin-left: 3.125rem;
+    font-family: OpenSans;
+    text-decoration-line: none; /* Remove the links' underlines. */
+}
+
+.navbar a#current {
+    background: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 2.875rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/* Formatting for the side bar's title, aka the site title. */
+.navbar h1 {
+    justify-self: center;
+    margin-left: 3.125rem;
+    font-family: NewsGothic-Cond;
+    font-weight: normal; /* This font actually only supports two variations, lighter-normal and bold-bolder. */
+    /* font-size: 22pt; */
+    font-size: 2rem;
+}
+
+/* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+#collapse_navbar {
+    position: relative;
+    z-index: -10;
+    display: none;
+}
+
+/* By making a main page class we can push everything over a bit, to account for the side bar. */
+/* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
+.page_main {
+    position: relative; /* Allows offset relative to where it would have been. */
+    width: calc(80% - 15.625rem); /* 80% = 100% - margin%s */
+    min-height: calc(100vh - 9.375rem); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. */
+    left: 15.625rem; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+    font-family: OpenSans;
+}
+
+/* Custom div style footer, used for the validation images in the navbar and the site's main copyright footer. */
+/* Decided to go with this since the base footer tag was not acting how I wished it would. */
+.footer {
+    position: relative;
+    width: calc(80% - 250px);
+    height: 3.125rem;
+    left: 15.625rem;
+    margin-left: 10%;
+    text-align: right;
+    font-family: NewsGothic-Cond; /* Sets the typeface. */
+    font-size: 0.8125rem; /* Set the font. */
+    font-weight: normal;
+
+    /* For debugging. */
+    /* background-color: tomato; */
+}
+
+/* Copyright footer formatting, for the site's main copyright footer. */
+/* Not yet needed, no adjustments from the base .footer class' style needed at this time. */
+/* #copyright {
+} */
+
+/* Validation footer formatting, for the navbar's validation image footer. */
+/* Provides style adjustments of the base .footer class' style. */
+#validation {
+    position: fixed;
+    width: 15.625rem;
+    left: 0;
+    bottom: 0.625rem;
+    margin-left: 0;
+    text-align: center;
+}
+
+/* Formatting for images within a validation footer, aka the W3C's validation images. */
+/* The pixel values here (88 and 31) are from W3C's site. */
+#validation img {
+    width: 5.5rem;
+    height: 1.9375rem;
+}
+
+/* Formatting for links within a validation footer, aka the W3C validation images' alt text. */
+#validation a {
+    margin-left: 0;
+    text-align: center;
+}
+
+/* PAGE SPECIFIC FORMATTING */
+/* ************************ */
+/* Classes and IDs that only appear on some pages. */
+
+/* Formatting for the external links images on the main page (ie GitHub, itch.io). */
+#external_link_images img {
+    margin: 1.5625rem;
+    border: 0;
+    height: 3.125rem;
+}
+
+/* Styling for the image within the n-body and project spaceship banners. */
+#banner img {
+    width: calc(80%); /* Similar to .page_main */
+}
+
+/* Styling for the screenshots on the n-body and project spaceship pages. */
+#screenshots img {
+    width: calc(30%);
+    margin-top: 1.5625rem;
+}
+
+/* ASSIGNMENT 3 */
+
+/* Styling for the Dynamic Table form set div. */
+.dynamic-table-form-set {
+    /* Centers the forms within the set. */
+    text-align: center;
+    border-width: 0.5rem;
+    border-style: groove;
+    vertical-align: middle;
+    padding: 1rem;
+}
+
+/* Styling for Assignment 3's Dynamic Table Form */
+.dynamic-table-form {
+    /* Allows side-by-side display. */
+    display: inline-block;
+
+    /* Left justifies the text in the forms. */
+    text-align: left;
+
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+/* Sets the styling of both form buttons, submit and clear. */
+.form-button {
+    /* Makes the text readable. */
+    font-size: 1.5rem;
+    /* Pushes it away from other things. */
+    margin: 2rem;
+    padding: 0.5rem;
+    /* Rounds the buttons. */
+    border-radius: 1.2rem;
+    background-color: #051B34;
+    color: white;
+    border-style: ridge;
+}
+
+/* When hovering over the buttons. */
+.form-button:hover {
+    background-color: #004F98;
+    color: white;
+}
+
+/* When clicking the buttons. */
+.form-button:active {
+    border-radius: 1.5rem;
+}
+
+/* Styling for the parent div of Assignment 3's Dynamic Table containing div. */
+.dynamic-table-holder {
+    /* Allows the centering of the .dynamic-table, because its inline-block. */
+    text-align: center;
+
+    padding-top: 2rem;
+}
+
+/* Styling for Assignment 3's Dynamic Table containing div. */
+.dynamic-table {
+    /* Prevents the div from spanning the entire page. */
+    display: inline-block;
+
+    /* Centers things within the div. */
+    margin: auto;
+
+    /* Enables scrollbars for when the table overflows. */
+    overflow: auto;
+
+    /* Sets max width to that of the page-main class, forcing scrolling. */
+    /* The page itself should be scrolled to view the vertical data. */
+    max-width: 100%;
+    max-height: 50rem;
+
+    background-color: white;
+}
+
+/* Styling for Assignment 3's Dynamic Table itself. */
+#mult-table {
+    /* Centers the table. */
+    margin: auto;
+}
+
+/* Styling for table header cells. */
+.dynamic-table th {
+    /* Keeps the headers from disappearing on scroll. */
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #051B34;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1rem;
+    min-width: 3rem;
+}
+
+/* ASSIGNMENT 4 */
+
+/* Styling for invalid marked fields. */
+.invalid {
+    border: 0.2em solid red;
+}
+
+/* Styling for valid marked fields. */
+.valid {
+    border: 0.2em solid green;
+}
+
+/* Styling for the invalid labels. */
+samp.invalid {
+    display: block;
+    border: none;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ASSIGNMENT 4p2 */
+
+/* Overrides sliders' default stylings. */
+.value_slider {
+    width: 147px;
+}
+
+/* GENERIC CONTAINERS */
+/* ****************** */
+/* These are useful for repeated use. */
+
+/* General div class for holding center-justified images. */
+.image_holder_center {
+    text-align: center;
+}
+
+/* General div class for holding left-justified images. */
+.image_holder_left {
+    text-align: left;
+}
+
+/* General div class for holding right-justified images. */
+.image_holder_right {
+    text-align: right;
+}   
+
+/* Attempting to account for mobile devices. */
+/* @media (min-resolution: 2dppx) { */
+@media screen and (max-width: 80rem) {
+    body {
+        background-color: beige;
+    }
+
+    /* Automatically hides the navbar. */
+    .navbar {
+        visibility: hidden;
+    }
+
+    /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+    #collapse_navbar {
+        position: fixed;
+        z-index: 10;
+        display: initial;
+        background-color: rgb(0,0,0,0);
+        border-style: none;
+        top: 0.3rem;
+        left: 0.15rem;
+    }
+
+    /* The image in the button. */
+    #collapse_navbar img {
+        height: 1.592rem;
+        width: 2rem;
+    }
+
+    /* By making a main page class we can push everything over a bit, to account for the side bar. */
+    /* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
+    .page_main {
+        position: relative; /* Allows offset relative to where it would have been. */
+        width: 80%; /* 80% = 100% - margin%s */
+        min-height: calc(100vh - 9.375rem); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. Nonsimplified for verbosity. */
+        left: 0; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+        font-family: OpenSans;
+    }
+}
+
+@media (min-resolution: 2dppx) {
+    body {
+        background-color: darkorchid;
+    }
+}

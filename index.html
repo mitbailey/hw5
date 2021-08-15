@@ -1,0 +1,81 @@
+<!-- 
+    @file index.html
+    @author Mit Bailey (mitbailey99@gmail.com)
+    @brief GUI Assignment 5
+    @version See Git tags for version info.
+    @date 2021.08.15
+
+    @copyright Copyright (c) 2021
+ -->
+
+<!-- Basic code block borrowed from: https://www.sitepoint.com/a-minimal-html-document-html5-edition/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Boilerplate Information -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mitbailey.com</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../src/script.js"></script>
+</head>
+
+<!-- Page Content -->
+
+<body>
+
+    <button type="button" onclick="collapseNavbar()" id="collapse_navbar">
+        <img src="../images/meb_tribar.png" alt="Toggle Sidebar" />
+    </button>
+
+    <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
+    <div class="navbar" id="side_navbar">
+        <br>
+
+        <!-- The site's title, as part of the site_side_navigation class. -->
+        <h1 id="main_title">mitbailey.com</h1><br><br>
+
+        <!-- The side navigation bar's links. -->
+        <a href="../index.html">Home</a><br><br>
+        <a href="gravity_simulator.html">Gravity Simulator</a><br><br>
+        <a href="project_spaceship.html">Project Spaceship</a><br><br>
+        <a href="project_paradigm.html" id="current">Project Paradigm</a><br><br>
+        <a href="misc_projects.html">Misc. Projects</a><br><br>
+        <a href="about_me.html">About Me</a><br><br>
+
+        <!-- The footer of the navbar, contains the W3C validation image links. -->
+        <div class="footer" id="validation">
+            <p>
+                <!-- W3C's CSS Validation Icon -->
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                    <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
+                </a>
+                <!-- HTML5 validation logo, from: https://github.com/bradleytaunt/html5-valid-badge since W3C doesn't offer one for HTML5. -->
+                <a
+                    href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fgravity_simulator.html">
+                    <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- The main page's 'body,' where most of the content will go. -->
+    <div class="page_main">
+
+    </div>
+
+    <!-- The main site footer, which contains copyright information. -->
+    <div class="footer" id="copyright">
+        Mit Bailey Copyright (c) 2021
+    </div>
+
+    <script src="../src/script.js"></script>
+</body>
+
+
+
+</html>
