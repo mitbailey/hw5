@@ -65,16 +65,30 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
+        <!-- Button to deal a new hand. -->
         <button type="button" onclick="deal()" class="form-button" id="clear-table">
             DEAL
         </button>
+
+        <!-- Button to start a new game. -->
         <button type="button" onclick="newGame()" class="form-button" id="clear-table">
             NEW GAME
         </button>
+
+        <!-- Button to start a new round. -->
+        <button type="button" onclick="newRound()" class="form-button" id="clear-table">
+            NEW ROUND
+        </button>
+
+        <!-- Displays the current score. -->
         <p class="score">SCORE: 0</p>
+
+        <!-- Displays the board image. -->
         <div class="board">
             <img src="images/Scrabble_Board_OneLine.png" alt="One Line Scrabble Board">
         </div>
+
+        <!-- Displays the tiles rack. -->
         <div class="rack-area">
             <img class="rack" height="160" src="images/Scrabble_Rack.png" alt="Scrabble Rack">
         </div>

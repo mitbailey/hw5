@@ -209,29 +209,7 @@ td {
     margin-top: 1.5625rem;
 }
 
-/* ASSIGNMENT 3 */
-
-/* Styling for the Dynamic Table form set div. */
-.dynamic-table-form-set {
-    /* Centers the forms within the set. */
-    text-align: center;
-    border-width: 0.5rem;
-    border-style: groove;
-    vertical-align: middle;
-    padding: 1rem;
-}
-
-/* Styling for Assignment 3's Dynamic Table Form */
-.dynamic-table-form {
-    /* Allows side-by-side display. */
-    display: inline-block;
-
-    /* Left justifies the text in the forms. */
-    text-align: left;
-
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-}
+/* ASSIGNMENT 5 */
 
 /* Sets the styling of both form buttons, submit and clear. */
 .form-button {
@@ -258,98 +236,23 @@ td {
     border-radius: 1.5rem;
 }
 
-/* Styling for the parent div of Assignment 3's Dynamic Table containing div. */
-.dynamic-table-holder {
-    /* Allows the centering of the .dynamic-table, because its inline-block. */
-    text-align: center;
-
-    padding-top: 2rem;
-}
-
-/* Styling for Assignment 3's Dynamic Table containing div. */
-.dynamic-table {
-    /* Prevents the div from spanning the entire page. */
-    display: inline-block;
-
-    /* Centers things within the div. */
-    margin: auto;
-
-    /* Enables scrollbars for when the table overflows. */
-    overflow: auto;
-
-    /* Sets max width to that of the page-main class, forcing scrolling. */
-    /* The page itself should be scrolled to view the vertical data. */
-    max-width: 100%;
-    max-height: 50rem;
-
-    background-color: white;
-}
-
-/* Styling for Assignment 3's Dynamic Table itself. */
-#mult-table {
-    /* Centers the table. */
-    margin: auto;
-}
-
-/* Styling for table header cells. */
-.dynamic-table th {
-    /* Keeps the headers from disappearing on scroll. */
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #051B34;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    border-width: 0.1rem;
-    min-width: 3rem;
-}
-
-/* ASSIGNMENT 4 */
-
-/* Styling for invalid marked fields. */
-.invalid {
-    border: 0.2em solid red;
-}
-
-/* Styling for valid marked fields. */
-.valid {
-    border: 0.2em solid green;
-}
-
-/* Styling for the invalid labels. */
-samp.invalid {
-    display: block;
-    border: none;
-    color: red;
-    font-weight: bold;
-    font-style: italic;
-}
-
-/* ASSIGNMENT 4p2 */
-
-/* Overrides sliders' default stylings. */
-.value_slider {
-    width: 147px;
-}
-
-/* ASSIGNMENT 5 */
-
+/* Allows board's children to position properly. */
 .board {
     position: relative;
 }
 
+/* Allows rack's children to position properly. */
 .rack {
     position: relative;
 }
 
-/* Objects with classnames beginning with hitbox. */
+/* Objects with classnames beginning with hitbox, pushes to the left. */
 [class^="hitbox"] {
     position: absolute;
     left: 0;
 }
 
-/* Objects with classnames containing tile. */
+/* Objects with classnames containing tile, pushes down and to the left. */
 [class*="tile"] {
     position: absolute;
     left: 0;
