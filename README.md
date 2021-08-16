@@ -1,9 +1,11 @@
 # Assignment 5
 
 ## Notes
-The two student examples from `yongcho` and `downing` were not referenced in any way.
+The two student examples from _yongcho_ and _downing_ were not referenced or viewed in any way.
 
-The provided .json files and associative arrays were not used.
+No collaboration took place on this project.
+
+The provided `.JSON` files and associative array examples were not used.
 
 `DEAL` removes unplaced tiles and deals seven new tiles.
 
@@ -47,7 +49,17 @@ The provided .json files and associative arrays were not used.
 - Word validation is not required and was _not implemented_.
 
 ## Links
+| Item  | Hyperlink |
+| ------------- | ------------- |
+| Website | https://mitbailey.github.io/hw5/ |
+| Repository  | https://github.com/mitbailey/hw5  |
+| HTML  | https://github.com/mitbailey/hw5/blob/master/index.html  |
+| CSS  | https://github.com/mitbailey/hw5/blob/master/css/style.css  |
+| JavaScript  | https://github.com/mitbailey/hw5/blob/master/scripts/script.js  |
+| README  | https://github.com/mitbailey/hw5/blob/master/README.md  |
 
 
 ## References
 https://jqueryui.com/
+
+Included jQuery 3.6.0 and jQuery UI.
