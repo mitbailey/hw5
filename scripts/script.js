@@ -219,7 +219,7 @@ function addHitboxes() {
 
                     // Mark this tile as filled in the board data structure.
                     board[(Number($(this).attr("id")) - 100)] = 1;
-                    
+
                     // Remove the basic tilen class and substitute it with a tile-dropped class.
                     for (var i = 0; i < 7; i++) {
                         $(ui.draggable).removeClass("tile" + i);
@@ -243,7 +243,7 @@ function addHitboxes() {
                 }
             });
         }
-        
+
         // If any other space, make it a normal score space.
         else {
 

@@ -49,14 +49,14 @@ The provided `.JSON` files and associative array examples were not used.
 - Word validation is not required and was _not implemented_.
 
 ## Links
-| Item  | Hyperlink |
-| ------------- | ------------- |
-| Website | https://mitbailey.github.io/hw5/ |
-| Repository  | https://github.com/mitbailey/hw5  |
-| HTML  | https://github.com/mitbailey/hw5/blob/master/index.html  |
-| CSS  | https://github.com/mitbailey/hw5/blob/master/css/style.css  |
-| JavaScript  | https://github.com/mitbailey/hw5/blob/master/scripts/script.js  |
-| README  | https://github.com/mitbailey/hw5/blob/master/README.md  |
+| Item       | Hyperlink                                                      |
+| ---------- | -------------------------------------------------------------- |
+| Website    | https://mitbailey.github.io/hw5/                               |
+| Repository | https://github.com/mitbailey/hw5                               |
+| HTML       | https://github.com/mitbailey/hw5/blob/master/index.html        |
+| CSS        | https://github.com/mitbailey/hw5/blob/master/css/style.css     |
+| JavaScript | https://github.com/mitbailey/hw5/blob/master/scripts/script.js |
+| README     | https://github.com/mitbailey/hw5/blob/master/README.md         |
 
 
 ## References
